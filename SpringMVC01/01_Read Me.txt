@@ -1,0 +1,31 @@
+Read Me.txt
+This note covers video 03 to 06 of Gontu tutorial on spring mvc framework.
+http://www.youtube.com/watch?v=iCQspqBpOB0
+
+01. In eclipse, create dynamic web project
+02. Give name to Project : SpringMVC01
+03. In order to use Spring Framework, we need to download spring jars from the the following location:
+	http://repo.spring.io/release/org/springframework/spring/
+04. In order to manage dependencies, you can take a look at maven or gradle in following link:
+	http://projects.spring.io/spring-framework/
+05. Copy all the spring jars and paste them in to the Projects lib folder i.e. Project>WebContent>WEB-INF>lib 
+06. Spring also needs commons-logging jars for logging purposes, which can be downloaded here: 
+	http://commons.apache.org/proper/commons-logging/download_logging.cgi
+07. Now we need any web server that supports servlet JSP technology like Apache Tomcat, Websphere, Weblogic, Jboss, etc..
+08. We will be using apache tomcat server.
+09. Download and installation instructions are given here:
+	http://tomcat.apache.org/download-70.cgi
+10. In order to integrate web server with eclipse, go to Eclipse > Window > Show View > Other > Servers > Servers. 
+11. This will open servers view, so select "new server wizard". So, we will be selecting Apache > Tomcat v7.0 Server. Click Next...
+12. Provide Tomcat installation directory which was downloaded above. Click Finish...
+13. In eclipse, right click on project > Targeted Runtimes > Check on Apache tomcat v7.0. Click Finish...
+
+14. Then we updated web.xml to include spring framework.
+15. Then We added spring-dispatcher-servlet.xml. This is called FRONT CONTROLLER in Spring Framework
+
+16. Add HelloController.java file and HelloPage.jsp files.
+17. Now we are ready to run application on server, for this, right click on project and Run As > Chose Run on Server
+18. Then open any browser and go to url: http://localhost:8080/SpringMVC01/welcome.html
+	The browser should display the appropriate message
+
+

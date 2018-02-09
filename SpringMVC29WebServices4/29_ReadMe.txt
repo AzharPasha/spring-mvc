@@ -1,0 +1,4 @@
+01. This project is based on Gontu Series video 36.
+02. To improve readability, move @ResponseBody annotated methods (methods related to REST API) from StudentAdmissionController.java to a new class StudentInfoRESTAPIController.java
+03. If we have decided to keep all REST API methods in this new class then use @RestController on top of class name. With this annotation, we don't need to specify @ResponseBody annotation on top of its methods.
+04. For some reason, if we have to keep @ResponseBody annotated and non @ResponseBody annotated methods in a single class, then specify @Controller annotation on top of its class and @ResponseBody on top of REST API methods.

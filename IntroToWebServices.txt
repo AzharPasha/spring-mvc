@@ -1,0 +1,32 @@
+Web Services 01 (Introduction to SOAP)
+
+Its all about developing a software application in such a way that it can allow other software applications (developed using any language) to call to its methods.
+The application which makes a call to the methods of a web service application is called Client Application. And web service application is in general known as Service Provider. These two applications should be connected via LAN, MAN or WAN.
+
+An application developed using SOAP guidelines is known as SOAP Web Service Application whereas an application developed using REST guidelines is known as REST Web Service Application.
+
+SOAP: Communication between Client Application and Service Provider happens using SOAP protocol in an xml format.
+To make a call to web service, Client Application need to know:
+1. exact location/address of service provider.
+2. exact signature of all exposed methods of service provider.
+The file which contains above info is known as WSDL (Web Service Description Language).
+
+Note: SOAP Web Service and its client can use other protocols too instead of http like SMTP, FTP, JMS etc as per the requirement.
+
+
+
+
+Web Service 02 (Introduction to REST)
+
+REST -> Representation State Transfer -> Just a set of guidelines.
+In a Client Server architecture, whatever data or functionality is kept at the server application which a client can access or modify is known as Resource. There can be any number of resources. The client can access or modify any of the resources using its URI.
+
+The Representation of the requested Resource can be in any of the valid formats like xml, json, html, csv, pdf etc...
+
+Some Important Notes:
+1. All the information which is present in the response (resource representation + additional information describing it)  Client should be able to modify or delete the corresponding resource present at the Server (if wants to) (provided the server has given the permissions to do so...)
+2. Countless number of intermediaries can be installed in between the Client and the Server also implies that at any given point of time Client should not be able to tell whether it is connected  directly to the Server or to any intermediary placed in between.
+3. When a Caching Server is installed between the Client and the Server - it is mandatory for the Server to explicitly specify in the response whether that response can be cacheable or not (this would help Caching Server to cache only those responses which Server wants to...)
+4. "Code on Demand" is one more REST guideline which I didn't discuss so far - this means Client system can be developed in an advanced way such that it is capable of downloading and executing  code in the form of Applets or Scripts. Eg: the way Java Applet or Java Script runs in a browser Client (this is an optional guideline	 - means even if it is not followed it is ok and still the system is said to be a REST based system if it follows all other REST guidelines)
+5. REST is best realized using HTTP protocol (it does not mean protocols other than http can not be used to realize REST)
+Note: this is just a short and quick overview of what is REST - for complete understanding please go through the REST guidelines as shared by Roy Fielding in his doctoral dissertation at this link: https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
